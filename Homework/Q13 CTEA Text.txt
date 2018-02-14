@@ -1,0 +1,16 @@
+Problem
+Recall from “Edit Distance Alignment” that if s′ and t′ are the augmented strings corresponding to an alignment of strings s and t, then the edit alignment score of s′ and t′ was given by the Hamming distance dH(s′,t′) (because s′ and t′ have the same length and already include gap symbols to denote insertions/deletions).
+
+As a result, we obtain dE(s,t)=mins′,t′dH(s′,t′), where the minimum is taken over all alignments of s and t. Strings s′ and t′ achieving this minimum correspond to an optimal alignment with respect to edit alignment score.
+
+Given: Two protein strings s and t in FASTA format, each of length at most 1000 aa.
+
+Return: The total number of optimal alignments of s and t with respect to edit alignment score, modulo 134,217,727 (227-1).
+
+Sample Dataset
+>Rosalind_78
+PLEASANTLY
+>Rosalind_33
+MEANLY
+Sample Output
+4

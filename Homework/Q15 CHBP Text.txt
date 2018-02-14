@@ -1,0 +1,18 @@
+Problem
+Because a tree having n nodes has n−1 edges (see “Completing a Tree”), removing a single edge from a tree will produce two smaller, disjoint trees. Recall from “Creating a Character Table” that for this reason, each edge of an unrooted binary tree corresponds to a split S∣Sc, where S is a subset of the taxa.
+
+A consistent character table is one whose characters' splits do not conflict with the edge splits of some unrooted binary tree T on the n taxa. More precisely, S1∣Sc1 conflicts with S2∣Sc2 if all four intersections S1∩S2, S1∩Sc2, Sc1∩S2, and Sc1∩Sc2 are nonempty. As a simple example, consider the conflicting splits {a,b}∣{c,d} and {a,c}∣{b,d}.
+
+More generally, given a consistent character table C, an unrooted binary tree T "models" C if the edge splits of T agree with the splits induced from the characters of C.
+
+Given: A list of n species (n≤80) and an n-column character table C in which the jth column denotes the jth species.
+
+Return: An unrooted binary tree in Newick format that models C.
+
+Sample Dataset
+cat dog elephant mouse rabbit rat
+011101
+001101
+001100
+Sample Output
+(dog,(cat,rabbit),(rat,(elephant,mouse)));
